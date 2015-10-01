@@ -1,0 +1,14 @@
+header{
+	background-color: $primary-color;
+	color: $primary-color-text;
+	padding: 100px 0;
+	margin-bottom:30px;
+	text-align: center;
+	h2{
+		font-size: 50px;
+	}
+	p{
+		margin-top:15px;
+		color: $primary-color-light;
+	}
+}

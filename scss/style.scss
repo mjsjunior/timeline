@@ -1,0 +1,85 @@
+@import "variaveis";
+@import "mixins";
+@import "header";
+body{
+	font-family: $font;
+}
+
+a{
+	color: $accent-color;
+	text-decoration:none;
+	&:hover,&:active{
+		opacity:0.7;
+		text-decoration:underline;
+	}
+}
+.container{
+	max-width: $container;
+	margin: 0 auto; 
+}
+
+.mark{
+	text-align:center;
+	.now{
+		@include button-time($accent-color,$primary-color-text);
+	}
+
+	.init{
+		@include button-time($accent-color,$primary-color-text);
+	}
+}
+
+.box:nth-child(odd){
+	@include create-box(left);
+    @include mobile-box();
+  	
+
+}
+
+
+.box:nth-child(even){
+	@include create-box(right);
+    @include mobile-box();
+  	
+
+}
+
+
+.box{
+	.title[type="twitter"]{
+		@include create-title(twitter);
+	}
+	.title[type="video"]{
+		@include create-title(video);
+	}
+	.title[type="pinterest"]{
+		@include create-title(pinterest);
+	}
+	.title[type="facebook"]{
+		@include create-title(facebook);
+	}
+	.content{
+		p{
+			font-weight:400;
+			line-height:21px;
+		}
+		iframe{
+			width:100%;
+			margin:5px 0;
+			@include border-radius(5px);
+			height:auto;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
